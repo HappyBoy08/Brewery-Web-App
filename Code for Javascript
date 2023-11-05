@@ -1,0 +1,35 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('login-form');
+    const searchLink = document.getElementById('search-link');
+    const searchSection = document.getElementById('search-section');
+
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        alert(`Welcome, ${username}!`);
+        loginForm.style.display = 'none';
+        searchSection.style.display = 'block';
+    });
+
+    searchLink.addEventListener('click', function(event) {
+        event.preventDefault();
+        searchSection.style.display = 'block';
+    });
+
+    const searchBtn = document.getElementById('search-btn');
+    const searchResults = document.getElementById('search-results');
+
+    searchBtn.addEventListener('click', function() {
+        const city = document.getElementById('city').value;
+        const name = document.getElementById('name').value;
+        const type = document.getElementById('type').value;
+
+        searchResults.innerHTML = `
+            <p>City: ${city}</p>
+            <p>Name: ${name}</p>
+            <p>Type: ${type}</p>
+        `;
+    });
+});
