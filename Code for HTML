@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewery Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Brewery</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#" id="search-link">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="search-section" style="display: none;">
+            <h2>Search Breweries</h2>
+            <label for="city">By City:</label>
+            <input type="text" id="city" name="city">
+            <label for="name">By Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="type">By Type:</label>
+            <input type="text" id="type" name="type">
+            <button id="search-btn">Search</button>
+            <div id="search-results"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Brewery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
